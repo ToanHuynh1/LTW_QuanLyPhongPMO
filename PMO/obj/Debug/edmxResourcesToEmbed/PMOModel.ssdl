@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_PMOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CapDoTL">
+    <Key>
+      <PropertyRef Name="MaCD" />
+    </Key>
+    <Property Name="MaCD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenCapDo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ChucVu">
+    <Key>
+      <PropertyRef Name="MaCV" />
+    </Key>
+    <Property Name="MaCV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenCV" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DangNhap">
+    <Key>
+      <PropertyRef Name="MaNS" />
+    </Key>
+    <Property Name="MaNS" Type="int" Nullable="false" />
+    <Property Name="UserLogin" Type="nvarchar(max)" />
+    <Property Name="PassLogin" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DiaDiem">
+    <Key>
+      <PropertyRef Name="MaDD" />
+    </Key>
+    <Property Name="MaDD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDD" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="HoatDongNhanSu">
+    <Key>
+      <PropertyRef Name="MaHD" />
+      <PropertyRef Name="MaNS" />
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaHD" Type="int" Nullable="false" />
+    <Property Name="MaNS" Type="int" Nullable="false" />
+    <Property Name="MaNV" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HoatDongThietBi">
+    <Key>
+      <PropertyRef Name="MaHD" />
+      <PropertyRef Name="MaTB" />
+    </Key>
+    <Property Name="MaHD" Type="int" Nullable="false" />
+    <Property Name="MaTB" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" />
+  </EntityType>
+  <EntityType Name="LichHoatDong">
+    <Key>
+      <PropertyRef Name="MaHD" />
+    </Key>
+    <Property Name="MaHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NgayMuon" Type="datetime" />
+    <Property Name="NgayTra" Type="datetime" />
+    <Property Name="TenHD" Type="nvarchar(max)" />
+    <Property Name="DiaDiem" Type="int" />
+    <Property Name="MaLoaiHD" Type="int" />
+    <Property Name="TrangThai" Type="int" />
+  </EntityType>
+  <EntityType Name="LoaiHoatDong">
+    <Key>
+      <PropertyRef Name="MaLoaiHD" />
+    </Key>
+    <Property Name="MaLoaiHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoaiHD" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="LoaiThietBi">
+    <Key>
+      <PropertyRef Name="MaLoaiTB" />
+    </Key>
+    <Property Name="MaLoaiTB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenLoai" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="NhanSu">
+    <Key>
+      <PropertyRef Name="MaNS" />
+    </Key>
+    <Property Name="MaNS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar(max)" />
+    <Property Name="CMND" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="date" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="11" />
+    <Property Name="MSSV" Type="nvarchar" MaxLength="9" />
+    <Property Name="Phai" Type="nvarchar" MaxLength="3" />
+    <Property Name="MaCV" Type="int" />
+    <Property Name="LinkFB" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="NhiemVu">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenNV" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenSP" Type="nvarchar(max)" />
+    <Property Name="LinkSP" Type="nvarchar(max)" />
+    <Property Name="LinkFB" Type="nvarchar(max)" />
+    <Property Name="LinkYT" Type="nvarchar(max)" />
+    <Property Name="NguonNhac" Type="nvarchar(max)" />
+    <Property Name="MoTa" Type="nvarchar(max)" />
+    <Property Name="KhoaNganh" Type="nvarchar(max)" />
+    <Property Name="ThoiLuong" Type="nvarchar" MaxLength="50" />
+    <Property Name="Producer" Type="int" />
+  </EntityType>
+  <EntityType Name="SanPhamTuLieux">
+    <Key>
+      <PropertyRef Name="SanPham_MaSP" />
+      <PropertyRef Name="TuLieu_MaTL" />
+    </Key>
+    <Property Name="SanPham_MaSP" Type="int" Nullable="false" />
+    <Property Name="TuLieu_MaTL" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ThietBi">
+    <Key>
+      <PropertyRef Name="MaTB" />
+    </Key>
+    <Property Name="MaTB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaLoaiTB" Type="int" />
+    <Property Name="TenTB" Type="nvarchar(max)" />
+    <Property Name="SoLuong" Type="int" />
+  </EntityType>
+  <EntityType Name="TrangThai">
+    <Key>
+      <PropertyRef Name="MaTT" />
+    </Key>
+    <Property Name="MaTT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTT" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TuLieu">
+    <Key>
+      <PropertyRef Name="MaTL" />
+    </Key>
+    <Property Name="MaTL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaHD" Type="int" />
+    <Property Name="NgayQuayTL" Type="datetime" />
+    <Property Name="MaCDTL" Type="int" />
+    <Property Name="TenTL" Type="nvarchar(max)" />
+    <Property Name="LinkTL" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_dbo_DangNhap_dbo_NhanSu_MaNS">
+    <End Role="NhanSu" Type="Self.NhanSu" Multiplicity="1" />
+    <End Role="DangNhap" Type="Self.DangNhap" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="NhanSu">
+        <PropertyRef Name="MaNS" />
+      </Principal>
+      <Dependent Role="DangNhap">
+        <PropertyRef Name="MaNS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_HoatDongNhanSu_dbo_LichHoatDong_MaHD">
+    <End Role="LichHoatDong" Type="Self.LichHoatDong" Multiplicity="1" />
+    <End Role="HoatDongNhanSu" Type="Self.HoatDongNhanSu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LichHoatDong">
+        <PropertyRef Name="MaHD" />
+      </Principal>
+      <Dependent Role="HoatDongNhanSu">
+        <PropertyRef Name="MaHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_HoatDongNhanSu_dbo_NhanSu_MaNS">
+    <End Role="NhanSu" Type="Self.NhanSu" Multiplicity="1" />
+    <End Role="HoatDongNhanSu" Type="Self.HoatDongNhanSu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanSu">
+        <PropertyRef Name="MaNS" />
+      </Principal>
+      <Dependent Role="HoatDongNhanSu">
+        <PropertyRef Name="MaNS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_HoatDongNhanSu_dbo_NhiemVu_MaNV">
+    <End Role="NhiemVu" Type="Self.NhiemVu" Multiplicity="1" />
+    <End Role="HoatDongNhanSu" Type="Self.HoatDongNhanSu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhiemVu">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="HoatDongNhanSu">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_HoatDongThietBi_dbo_LichHoatDong_MaHD">
+    <End Role="LichHoatDong" Type="Self.LichHoatDong" Multiplicity="1" />
+    <End Role="HoatDongThietBi" Type="Self.HoatDongThietBi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LichHoatDong">
+        <PropertyRef Name="MaHD" />
+      </Principal>
+      <Dependent Role="HoatDongThietBi">
+        <PropertyRef Name="MaHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_HoatDongThietBi_dbo_ThietBi_MaTB">
+    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="1" />
+    <End Role="HoatDongThietBi" Type="Self.HoatDongThietBi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThietBi">
+        <PropertyRef Name="MaTB" />
+      </Principal>
+      <Dependent Role="HoatDongThietBi">
+        <PropertyRef Name="MaTB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_LichHoatDong_dbo_DiaDiem_DiaDiem">
+    <End Role="DiaDiem" Type="Self.DiaDiem" Multiplicity="0..1" />
+    <End Role="LichHoatDong" Type="Self.LichHoatDong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaDiem">
+        <PropertyRef Name="MaDD" />
+      </Principal>
+      <Dependent Role="LichHoatDong">
+        <PropertyRef Name="DiaDiem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_LichHoatDong_dbo_LoaiHoatDong_MaLoaiHD">
+    <End Role="LoaiHoatDong" Type="Self.LoaiHoatDong" Multiplicity="0..1" />
+    <End Role="LichHoatDong" Type="Self.LichHoatDong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiHoatDong">
+        <PropertyRef Name="MaLoaiHD" />
+      </Principal>
+      <Dependent Role="LichHoatDong">
+        <PropertyRef Name="MaLoaiHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_LichHoatDong_dbo_TrangThai_TrangThai">
+    <End Role="TrangThai" Type="Self.TrangThai" Multiplicity="0..1" />
+    <End Role="LichHoatDong" Type="Self.LichHoatDong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrangThai">
+        <PropertyRef Name="MaTT" />
+      </Principal>
+      <Dependent Role="LichHoatDong">
+        <PropertyRef Name="TrangThai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_NhanSu_dbo_ChucVu_MaCV">
+    <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="0..1" />
+    <End Role="NhanSu" Type="Self.NhanSu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChucVu">
+        <PropertyRef Name="MaCV" />
+      </Principal>
+      <Dependent Role="NhanSu">
+        <PropertyRef Name="MaCV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SanPham_dbo_NhanSu_Producer">
+    <End Role="NhanSu" Type="Self.NhanSu" Multiplicity="0..1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanSu">
+        <PropertyRef Name="MaNS" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="Producer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SanPhamTuLieux_dbo_SanPham_SanPham_MaSP">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="SanPhamTuLieux" Type="Self.SanPhamTuLieux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="SanPhamTuLieux">
+        <PropertyRef Name="SanPham_MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SanPhamTuLieux_dbo_TuLieu_TuLieu_MaTL">
+    <End Role="TuLieu" Type="Self.TuLieu" Multiplicity="1" />
+    <End Role="SanPhamTuLieux" Type="Self.SanPhamTuLieux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TuLieu">
+        <PropertyRef Name="MaTL" />
+      </Principal>
+      <Dependent Role="SanPhamTuLieux">
+        <PropertyRef Name="TuLieu_MaTL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ThietBi_dbo_LoaiThietBi_MaLoaiTB">
+    <End Role="LoaiThietBi" Type="Self.LoaiThietBi" Multiplicity="0..1" />
+    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiThietBi">
+        <PropertyRef Name="MaLoaiTB" />
+      </Principal>
+      <Dependent Role="ThietBi">
+        <PropertyRef Name="MaLoaiTB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_TuLieu_dbo_CapDoTL_MaCDTL">
+    <End Role="CapDoTL" Type="Self.CapDoTL" Multiplicity="0..1" />
+    <End Role="TuLieu" Type="Self.TuLieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CapDoTL">
+        <PropertyRef Name="MaCD" />
+      </Principal>
+      <Dependent Role="TuLieu">
+        <PropertyRef Name="MaCDTL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_TuLieu_dbo_LichHoatDong_MaHD">
+    <End Role="LichHoatDong" Type="Self.LichHoatDong" Multiplicity="0..1" />
+    <End Role="TuLieu" Type="Self.TuLieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LichHoatDong">
+        <PropertyRef Name="MaHD" />
+      </Principal>
+      <Dependent Role="TuLieu">
+        <PropertyRef Name="MaHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_PMOModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CapDoTL" EntityType="Self.CapDoTL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChucVu" EntityType="Self.ChucVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DangNhap" EntityType="Self.DangNhap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DiaDiem" EntityType="Self.DiaDiem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoatDongNhanSu" EntityType="Self.HoatDongNhanSu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoatDongThietBi" EntityType="Self.HoatDongThietBi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LichHoatDong" EntityType="Self.LichHoatDong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiHoatDong" EntityType="Self.LoaiHoatDong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiThietBi" EntityType="Self.LoaiThietBi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhanSu" EntityType="Self.NhanSu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhiemVu" EntityType="Self.NhiemVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanPhamTuLieux" EntityType="Self.SanPhamTuLieux" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThietBi" EntityType="Self.ThietBi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrangThai" EntityType="Self.TrangThai" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TuLieu" EntityType="Self.TuLieu" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_DangNhap_dbo_NhanSu_MaNS" Association="Self.FK_dbo_DangNhap_dbo_NhanSu_MaNS">
+      <End Role="NhanSu" EntitySet="NhanSu" />
+      <End Role="DangNhap" EntitySet="DangNhap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_HoatDongNhanSu_dbo_LichHoatDong_MaHD" Association="Self.FK_dbo_HoatDongNhanSu_dbo_LichHoatDong_MaHD">
+      <End Role="LichHoatDong" EntitySet="LichHoatDong" />
+      <End Role="HoatDongNhanSu" EntitySet="HoatDongNhanSu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_HoatDongNhanSu_dbo_NhanSu_MaNS" Association="Self.FK_dbo_HoatDongNhanSu_dbo_NhanSu_MaNS">
+      <End Role="NhanSu" EntitySet="NhanSu" />
+      <End Role="HoatDongNhanSu" EntitySet="HoatDongNhanSu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_HoatDongNhanSu_dbo_NhiemVu_MaNV" Association="Self.FK_dbo_HoatDongNhanSu_dbo_NhiemVu_MaNV">
+      <End Role="NhiemVu" EntitySet="NhiemVu" />
+      <End Role="HoatDongNhanSu" EntitySet="HoatDongNhanSu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_HoatDongThietBi_dbo_LichHoatDong_MaHD" Association="Self.FK_dbo_HoatDongThietBi_dbo_LichHoatDong_MaHD">
+      <End Role="LichHoatDong" EntitySet="LichHoatDong" />
+      <End Role="HoatDongThietBi" EntitySet="HoatDongThietBi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_HoatDongThietBi_dbo_ThietBi_MaTB" Association="Self.FK_dbo_HoatDongThietBi_dbo_ThietBi_MaTB">
+      <End Role="ThietBi" EntitySet="ThietBi" />
+      <End Role="HoatDongThietBi" EntitySet="HoatDongThietBi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_LichHoatDong_dbo_DiaDiem_DiaDiem" Association="Self.FK_dbo_LichHoatDong_dbo_DiaDiem_DiaDiem">
+      <End Role="DiaDiem" EntitySet="DiaDiem" />
+      <End Role="LichHoatDong" EntitySet="LichHoatDong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_LichHoatDong_dbo_LoaiHoatDong_MaLoaiHD" Association="Self.FK_dbo_LichHoatDong_dbo_LoaiHoatDong_MaLoaiHD">
+      <End Role="LoaiHoatDong" EntitySet="LoaiHoatDong" />
+      <End Role="LichHoatDong" EntitySet="LichHoatDong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_LichHoatDong_dbo_TrangThai_TrangThai" Association="Self.FK_dbo_LichHoatDong_dbo_TrangThai_TrangThai">
+      <End Role="TrangThai" EntitySet="TrangThai" />
+      <End Role="LichHoatDong" EntitySet="LichHoatDong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_NhanSu_dbo_ChucVu_MaCV" Association="Self.FK_dbo_NhanSu_dbo_ChucVu_MaCV">
+      <End Role="ChucVu" EntitySet="ChucVu" />
+      <End Role="NhanSu" EntitySet="NhanSu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SanPham_dbo_NhanSu_Producer" Association="Self.FK_dbo_SanPham_dbo_NhanSu_Producer">
+      <End Role="NhanSu" EntitySet="NhanSu" />
+      <End Role="SanPham" EntitySet="SanPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SanPhamTuLieux_dbo_SanPham_SanPham_MaSP" Association="Self.FK_dbo_SanPhamTuLieux_dbo_SanPham_SanPham_MaSP">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="SanPhamTuLieux" EntitySet="SanPhamTuLieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SanPhamTuLieux_dbo_TuLieu_TuLieu_MaTL" Association="Self.FK_dbo_SanPhamTuLieux_dbo_TuLieu_TuLieu_MaTL">
+      <End Role="TuLieu" EntitySet="TuLieu" />
+      <End Role="SanPhamTuLieux" EntitySet="SanPhamTuLieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ThietBi_dbo_LoaiThietBi_MaLoaiTB" Association="Self.FK_dbo_ThietBi_dbo_LoaiThietBi_MaLoaiTB">
+      <End Role="LoaiThietBi" EntitySet="LoaiThietBi" />
+      <End Role="ThietBi" EntitySet="ThietBi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_TuLieu_dbo_CapDoTL_MaCDTL" Association="Self.FK_dbo_TuLieu_dbo_CapDoTL_MaCDTL">
+      <End Role="CapDoTL" EntitySet="CapDoTL" />
+      <End Role="TuLieu" EntitySet="TuLieu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_TuLieu_dbo_LichHoatDong_MaHD" Association="Self.FK_dbo_TuLieu_dbo_LichHoatDong_MaHD">
+      <End Role="LichHoatDong" EntitySet="LichHoatDong" />
+      <End Role="TuLieu" EntitySet="TuLieu" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

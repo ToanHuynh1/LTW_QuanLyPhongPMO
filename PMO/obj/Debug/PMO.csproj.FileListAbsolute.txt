@@ -1,0 +1,62 @@
+D:\lap trinh win\PMO\PMO\bin\Debug\PMO.exe.config
+D:\lap trinh win\PMO\PMO\bin\Debug\PMO.exe
+D:\lap trinh win\PMO\PMO\bin\Debug\PMO.pdb
+D:\lap trinh win\PMO\PMO\bin\Debug\EntityFramework.dll
+D:\lap trinh win\PMO\PMO\bin\Debug\EntityFramework.SqlServer.dll
+D:\lap trinh win\PMO\PMO\bin\Debug\EntityFramework.xml
+D:\lap trinh win\PMO\PMO\bin\Debug\EntityFramework.SqlServer.xml
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.csproj.AssemblyReference.cache
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.csproj.SuggestedBindingRedirects.cache
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.FormDiaDiem.resources
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.TrangChuPMO.resources
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.csproj.GenerateResource.cache
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.csproj.CoreCompileInputs.cache
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.csproj.CopyComplete
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.exe
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.pdb
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.Properties.Resources.resources
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.LoginDangNhap.resources
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.ThongTinCaNhan.resources
+D:\lap trinh win\PMO\PMO\obj\Debug\PMO.DoiMatKhau.resources
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\bin\Debug\PMO.exe.config
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\bin\Debug\PMO.exe
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\bin\Debug\PMO.pdb
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\bin\Debug\EntityFramework.dll
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\bin\Debug\EntityFramework.xml
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\bin\Debug\EntityFramework.SqlServer.xml
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.csproj.AssemblyReference.cache
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.DoiMatKhau.resources
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.FormDiaDiem.resources
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.LoginDangNhap.resources
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.Properties.Resources.resources
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.ThongTinCaNhan.resources
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.TrangChuPMO.resources
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.csproj.GenerateResource.cache
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.csproj.CoreCompileInputs.cache
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.csproj.CopyComplete
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.exe
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.pdb
+D:\Nam2_ki2\laptrinhwinform\DETAIQUANLYPHONGTRUYENTHONG\5\PMOnew\PMO\PMO\obj\Debug\PMO.ThongTinNhanSu.resources
+D:\LamBai\PMOnew\PMO\PMO\bin\Debug\PMO.exe.config
+D:\LamBai\PMOnew\PMO\PMO\bin\Debug\PMO.exe
+D:\LamBai\PMOnew\PMO\PMO\bin\Debug\PMO.pdb
+D:\LamBai\PMOnew\PMO\PMO\bin\Debug\EntityFramework.dll
+D:\LamBai\PMOnew\PMO\PMO\bin\Debug\EntityFramework.SqlServer.dll
+D:\LamBai\PMOnew\PMO\PMO\bin\Debug\EntityFramework.xml
+D:\LamBai\PMOnew\PMO\PMO\bin\Debug\EntityFramework.SqlServer.xml
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.csproj.AssemblyReference.cache
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.csproj.SuggestedBindingRedirects.cache
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.DoiMatKhau.resources
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.FormDiaDiem.resources
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.LoginDangNhap.resources
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.Properties.Resources.resources
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.ThongTinCaNhan.resources
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.ThongTinNhanSu.resources
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.TrangChuPMO.resources
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.csproj.GenerateResource.cache
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.csproj.CoreCompileInputs.cache
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.csproj.CopyComplete
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.exe
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.pdb
+D:\LamBai\PMOnew\PMO\PMO\obj\Debug\PMO.ThongTinThietBi.resources

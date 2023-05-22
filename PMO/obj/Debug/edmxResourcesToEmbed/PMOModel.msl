@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_PMOModelStoreContainer" CdmEntityContainer="DB_PMOEntities1">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="DB_PMOModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CapDoTLs">
+      <EntityTypeMapping TypeName="DB_PMOModel.CapDoTL">
+        <MappingFragment StoreEntitySet="CapDoTL">
+          <ScalarProperty Name="MaCD" ColumnName="MaCD" />
+          <ScalarProperty Name="TenCapDo" ColumnName="TenCapDo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChucVus">
+      <EntityTypeMapping TypeName="DB_PMOModel.ChucVu">
+        <MappingFragment StoreEntitySet="ChucVu">
+          <ScalarProperty Name="MaCV" ColumnName="MaCV" />
+          <ScalarProperty Name="TenCV" ColumnName="TenCV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DangNhaps">
+      <EntityTypeMapping TypeName="DB_PMOModel.DangNhap">
+        <MappingFragment StoreEntitySet="DangNhap">
+          <ScalarProperty Name="MaNS" ColumnName="MaNS" />
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="PassLogin" ColumnName="PassLogin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiaDiems">
+      <EntityTypeMapping TypeName="DB_PMOModel.DiaDiem">
+        <MappingFragment StoreEntitySet="DiaDiem">
+          <ScalarProperty Name="MaDD" ColumnName="MaDD" />
+          <ScalarProperty Name="TenDD" ColumnName="TenDD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoatDongNhanSus">
+      <EntityTypeMapping TypeName="DB_PMOModel.HoatDongNhanSu">
+        <MappingFragment StoreEntitySet="HoatDongNhanSu">
+          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+          <ScalarProperty Name="MaNS" ColumnName="MaNS" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoatDongThietBis">
+      <EntityTypeMapping TypeName="DB_PMOModel.HoatDongThietBi">
+        <MappingFragment StoreEntitySet="HoatDongThietBi">
+          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+          <ScalarProperty Name="MaTB" ColumnName="MaTB" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LichHoatDongs">
+      <EntityTypeMapping TypeName="DB_PMOModel.LichHoatDong">
+        <MappingFragment StoreEntitySet="LichHoatDong">
+          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+          <ScalarProperty Name="NgayMuon" ColumnName="NgayMuon" />
+          <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
+          <ScalarProperty Name="TenHD" ColumnName="TenHD" />
+          <ScalarProperty Name="DiaDiem" ColumnName="DiaDiem" />
+          <ScalarProperty Name="MaLoaiHD" ColumnName="MaLoaiHD" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiHoatDongs">
+      <EntityTypeMapping TypeName="DB_PMOModel.LoaiHoatDong">
+        <MappingFragment StoreEntitySet="LoaiHoatDong">
+          <ScalarProperty Name="MaLoaiHD" ColumnName="MaLoaiHD" />
+          <ScalarProperty Name="LoaiHD" ColumnName="LoaiHD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiThietBis">
+      <EntityTypeMapping TypeName="DB_PMOModel.LoaiThietBi">
+        <MappingFragment StoreEntitySet="LoaiThietBi">
+          <ScalarProperty Name="MaLoaiTB" ColumnName="MaLoaiTB" />
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhanSus">
+      <EntityTypeMapping TypeName="DB_PMOModel.NhanSu">
+        <MappingFragment StoreEntitySet="NhanSu">
+          <ScalarProperty Name="MaNS" ColumnName="MaNS" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+          <ScalarProperty Name="Phai" ColumnName="Phai" />
+          <ScalarProperty Name="MaCV" ColumnName="MaCV" />
+          <ScalarProperty Name="LinkFB" ColumnName="LinkFB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhiemVus">
+      <EntityTypeMapping TypeName="DB_PMOModel.NhiemVu">
+        <MappingFragment StoreEntitySet="NhiemVu">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SanPhams">
+      <EntityTypeMapping TypeName="DB_PMOModel.SanPham">
+        <MappingFragment StoreEntitySet="SanPham">
+          <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+          <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+          <ScalarProperty Name="LinkSP" ColumnName="LinkSP" />
+          <ScalarProperty Name="LinkFB" ColumnName="LinkFB" />
+          <ScalarProperty Name="LinkYT" ColumnName="LinkYT" />
+          <ScalarProperty Name="NguonNhac" ColumnName="NguonNhac" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="KhoaNganh" ColumnName="KhoaNganh" />
+          <ScalarProperty Name="ThoiLuong" ColumnName="ThoiLuong" />
+          <ScalarProperty Name="Producer" ColumnName="Producer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThietBis">
+      <EntityTypeMapping TypeName="DB_PMOModel.ThietBi">
+        <MappingFragment StoreEntitySet="ThietBi">
+          <ScalarProperty Name="MaTB" ColumnName="MaTB" />
+          <ScalarProperty Name="MaLoaiTB" ColumnName="MaLoaiTB" />
+          <ScalarProperty Name="TenTB" ColumnName="TenTB" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrangThais">
+      <EntityTypeMapping TypeName="DB_PMOModel.TrangThai">
+        <MappingFragment StoreEntitySet="TrangThai">
+          <ScalarProperty Name="MaTT" ColumnName="MaTT" />
+          <ScalarProperty Name="TenTT" ColumnName="TenTT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TuLieux">
+      <EntityTypeMapping TypeName="DB_PMOModel.TuLieu">
+        <MappingFragment StoreEntitySet="TuLieu">
+          <ScalarProperty Name="MaTL" ColumnName="MaTL" />
+          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+          <ScalarProperty Name="NgayQuayTL" ColumnName="NgayQuayTL" />
+          <ScalarProperty Name="MaCDTL" ColumnName="MaCDTL" />
+          <ScalarProperty Name="TenTL" ColumnName="TenTL" />
+          <ScalarProperty Name="LinkTL" ColumnName="LinkTL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="SanPhamTuLieux" TypeName="DB_PMOModel.SanPhamTuLieux" StoreEntitySet="SanPhamTuLieux">
+      <EndProperty Name="SanPham">
+        <ScalarProperty Name="MaSP" ColumnName="SanPham_MaSP" />
+      </EndProperty>
+      <EndProperty Name="TuLieu">
+        <ScalarProperty Name="MaTL" ColumnName="TuLieu_MaTL" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

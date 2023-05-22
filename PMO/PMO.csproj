@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7A64903-67AE-4767-94C5-18A73B1FE9FF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PMO</RootNamespace>
+    <AssemblyName>PMO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CacNhanSu.Designer.cs">
+      <DependentUpon>CacNhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maps\CapDoTLMap.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="DangNhapLayer.cs" />
+    <Compile Include="DiaDiemLayer.cs" />
+    <Compile Include="Maps\DiaDiemMap.cs" />
+    <Compile Include="DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDiaDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDiaDiem.Designer.cs">
+      <DependentUpon>FormDiaDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Initializer.cs" />
+    <Compile Include="Maps\LichHoatDongMap.cs" />
+    <Compile Include="LoginDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginDangNhap.Designer.cs">
+      <DependentUpon>LoginDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CapDoTL.cs" />
+    <Compile Include="Models\ChucVu.cs" />
+    <Compile Include="Models\DangNhap.cs" />
+    <Compile Include="Models\DiaDiem.cs" />
+    <Compile Include="Models\HoatDongNhanSu.cs" />
+    <Compile Include="Models\HoatDongThietBiMuon.cs" />
+    <Compile Include="Models\LichHoatDong.cs" />
+    <Compile Include="Models\LoaiHoatDong.cs" />
+    <Compile Include="Models\LoaiThietBi.cs" />
+    <Compile Include="Models\NhanSu.cs" />
+    <Compile Include="Models\NhiemVu.cs" />
+    <Compile Include="Models\SanPham.cs" />
+    <Compile Include="Models\ThietBi.cs" />
+    <Compile Include="Models\TrangThai.cs" />
+    <Compile Include="Models\TuLieu.cs" />
+    <Compile Include="NhanSuLayer.cs" />
+    <Compile Include="Maps\NhanSuMap.cs" />
+    <Compile Include="Maps\NhiemVuMap.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Maps\SanPhamMap.cs" />
+    <Compile Include="Maps\ThietBiMap.cs" />
+    <Compile Include="ThietBiLayer.cs" />
+    <Compile Include="ThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinCaNhan.Designer.cs">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinCaNhanLayer.cs" />
+    <Compile Include="ThongTinHoatDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinHoatDong.Designer.cs">
+      <DependentUpon>ThongTinHoatDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinNhanSu.Designer.cs">
+      <DependentUpon>ThongTinNhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinSanPham.Designer.cs">
+      <DependentUpon>ThongTinSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinThietBi.Designer.cs">
+      <DependentUpon>ThongTinThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinTuLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinTuLieu.Designer.cs">
+      <DependentUpon>ThongTinTuLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChuPMO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChuPMO.Designer.cs">
+      <DependentUpon>TrangChuPMO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChuPMOLayer.cs" />
+    <Compile Include="Maps\TrangThaiMap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDiaDiem.resx">
+      <DependentUpon>FormDiaDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginDangNhap.resx">
+      <DependentUpon>LoginDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinCaNhan.resx">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinNhanSu.resx">
+      <DependentUpon>ThongTinNhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinThietBi.resx">
+      <DependentUpon>ThongTinThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChuPMO.resx">
+      <DependentUpon>TrangChuPMO.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14991300_359053834435022_1970303110729708052_o.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
